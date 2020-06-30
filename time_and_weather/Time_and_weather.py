@@ -81,7 +81,8 @@ class Temperature():
         
         self.temp_text.config(font=("Courier", 15), bg='#FFD3B5')
         self.temp_text.grid(column=0, row=3)
-                               
+
+# setting up the GUI                               
 time_window=Tk()
 time_window.configure(bg='#F8B195')
 time_window.geometry('800x800')
@@ -89,6 +90,8 @@ time_window.minsize(800, 800)
 blank = Label(time_window, text = " ")
 blank.configure(font=("Courier", 30), bg='#F8B195')
 time_window.columnconfigure(0, weight=3)
+                               
+# Using the classes
 screen1 = Time_Screen()
 screen1.set_time_screen()
 location = Location()
