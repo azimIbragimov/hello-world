@@ -104,8 +104,3 @@ class Twitter_miner:
                 'username': tweet.user.screen_name,
                 "statement": tweet.text.encode("utf-8")}, )
 
-
-if __name__ == "__main__":
-
-    miner = Twitter_miner()
-    miner.search_for_user_csv('RachelMorris', 20, "tweet7.csv")
