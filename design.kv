@@ -1,0 +1,42 @@
+<ConverterScreen>:
+    cols: 1
+
+    GridLayout:
+        cols: 2
+        GridLayout:
+            cols: 1
+            GridLayout:
+                padding: 15,15
+                spacing: 20,20
+                cols: 1
+                Label:
+                    text: "Currency Converter"
+                    font_size: "40sp"
+                Label:
+                    text: "Converts US Dollars into other currencies"
+                    font_size: "20sp"
+
+                TextInput:
+                    id: currency
+                    hint_text: "Currency name"
+                TextInput:
+                    id: amount
+                    hint_text: "Amount"
+                Button:
+                    on_press: root.convert()
+                    text: "Convert"
+                    background_color: 1, 1, 1, 0
+                    opacity: 1 if self.state == 'normal' else 0.5
+                    color: 0.1, 0.7, 1, 1
+
+        Label:
+            id: result
+            text: ""
+            font_size: "20sp"
+
+
+
+
+<RootWidget>:
+    ConverterScreen:
+        name: "converter_screen"
