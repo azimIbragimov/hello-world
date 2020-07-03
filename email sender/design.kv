@@ -1,0 +1,48 @@
+<SignInScreen>:
+    cols: 1
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'lights.jpg'
+    GridLayout:
+        cols: 1
+        padding: 50, 50
+        spacing: 50, 50
+        GridLayout:
+            cols: 1
+            GridLayout:
+                cols: 1
+                TextInput:
+                    background_color: 1, 1, 1, 0.8
+                    id: your_address
+                    hint_text: "Your email address"
+                TextInput:
+                    background_color: 1, 1, 1, 0.8
+                    id: receiver_address
+                    hint_text: "Receipient's email address"
+                TextInput:
+                    background_color: 1, 1, 1, 0.8
+                    id: password
+                    hint_text: "Password"
+
+
+        GridLayout:
+            cols: 1
+            TextInput:
+                background_color: 1, 1, 1, 0.8
+                id: message
+                hint_text: "Message"
+        GridLayout:
+            cols: 1
+            padding: 50, 50
+            Button:
+                id: button1
+                on_press: root.convert()
+                text: "Submit"
+                background_color: 1, 1, 1, 0.7
+                opacity: 1 if self.state == 'normal' else 0.5
+                color: 0.1, 0.7, 1, 1
+<RootWidget>:
+    SignInScreen:
+        name: "SignInScreen"
