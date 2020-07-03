@@ -1,0 +1,36 @@
+<GeneratorScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'lights.png'
+    cols: 1
+
+    GridLayout:
+        cols: 1
+        padding: 100,100
+        spacing: 20,20
+        Label:
+            text: "Random Password Generator"
+            font_size: "40sp"
+        TextInput
+            padding: 15,15
+            spacing: 20,20
+            id: length
+            hint_text: "Number of characters"
+        Button:
+            on_press: root.generate()
+            text: "Convert"
+
+            background_color: 1, 1, 1, 0.5
+            opacity: 1 if self.state == 'normal' else 0.5
+            color: 0.1, 0.7, 1, 1
+
+        Label:
+            id: password
+            text: ""
+            font_size: "20sp"
+
+<RootWidget>:
+    GeneratorScreen:
+        name: "generator_screen"
