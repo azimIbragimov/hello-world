@@ -1,0 +1,46 @@
+<TypingScreen>:
+    GridLayout:
+        cols: 1
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'lights.jpg'
+        GridLayout:
+            cols:4
+            size_hint: (1, 0.1)
+            Label:
+                text: "Speed(letters/min)"
+            Label:
+                id: speed
+                text: '0'
+            Label:
+                text: "Errors"
+            Label:
+                id: errors
+                text: '0'
+
+
+        Label:
+            valign: 'middle'
+            id: text_test
+        TextInput:
+            background_color: 1, 1, 1, 0.8
+            id: your_text
+            hint_text: "Your text"
+        GridLayout:
+            size_hint: (1, 0.2)
+            cols:2
+            Button:
+                background_color: 1, 1, 1, 0.6
+                on_press: root.start()
+                text: "Start"
+            Button:
+                background_color: 1, 1, 1, 0.6
+                on_press: root.finish()
+                text: "Finish"
+
+
+<RootWidget>:
+    TypingScreen:
+        name: "typing_screen"
