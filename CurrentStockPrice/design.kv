@@ -1,0 +1,51 @@
+<Stock>
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'lights.jpg'
+    cols:1
+    FloatLayout:
+        cols: 1
+        Label:
+            padding: 40, 40
+            text: "Stock Market Information"
+            bold:True
+            italic: True
+            text_size: self.size
+            halign: 'left'
+            valign: 'top'
+            font_size: 30
+            color: 0, 0, 0, 1
+        TextInput:
+            id: company
+            hint_text: "Company's stock market code"
+            multiline: False
+            size_hint: (.4, None)
+            height: 30
+            pos_hint : {'x':0.1, "top": 0.7}
+            tab_width: 8
+        Button:
+            text: 'Search'
+            size_hint: 0.3, 0.05
+            pos_hint: {"x":0.1, "y":0.6}
+            on_press: root.find()
+
+        Label:
+            size: self.texture_size
+            id: informationstock
+            padding: 20, 20
+            text: ""
+            bold:True
+            italic: True
+            text_size: self.size
+            font_size: 20
+            color: 0, 0, 0, 1
+            pos_hint: {'x': 0.55, "y": 0.3}
+
+
+
+
+<RootWidget>:
+    Stock:
+        name: "stock_screen"
