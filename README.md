@@ -5,3 +5,10 @@ My name is Azim and I am a freshman at the University of South Florida. I decide
 
 List of projects:
 1. Time and weather app
+2. Twitter Miner
+3. DiscordBotCalculator
+4. Random Password Generator
+5. Email sender
+6. Speed typing test
+7. Smart Assistant
+8. Current Stock Price
