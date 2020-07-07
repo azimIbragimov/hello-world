@@ -12,3 +12,5 @@ List of projects:
 6. Speed typing test
 7. Smart Assistant
 8. Current Stock Price
+9. Web Scrapper
+
