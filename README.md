@@ -13,4 +13,7 @@ List of projects:
 7. Smart Assistant
 8. Current Stock Price
 9. Web Scrapper
+10. Calculator 
+11. News Viewer
+
 
