@@ -15,5 +15,7 @@ List of projects:
 9. Web Scrapper
 10. Calculator 
 11. News Viewer
+12. Calculator 
+13. City of Seatle Staff Demographics
 
 
